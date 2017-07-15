@@ -1,16 +1,18 @@
-class UsersController < ApplicationController
-  before_action :set_, only: [:show, :edit, :update, :destroy]
+require 'byebug'
 
-  # GET /s
-  # GET /s.json
+class UsersController < ApplicationController
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
+
+  # GET /users
+  # GET /users.json
   def index
     @users = User.all
   end
 
-  # GET /s/1
-  # GET /s/1.json
+  # GET /users/1
+  # GET /users/1.json
   def show
-
+    @user = User.find(params[:id])
   end
 
   # GET /users/new
@@ -42,7 +44,7 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1.json
   def update
     respond_to do |format|
-      if @users.update(user_params)
+      if @user.update(user_params)
         format.html { redirect_to @user, notice: 'User was successfully updated.' }
         format.json { render :show, status: :ok, location: @user }
       else
@@ -70,6 +72,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :email)
+      params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end
 end
