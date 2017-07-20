@@ -42,6 +42,21 @@ input {
   }
 }
 
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  margin-top: -4px;
+  width: auto;
+  margin-left: -1px;
+}
+
 /* universal styles */
 
 body {
