@@ -10,8 +10,14 @@ end
 gem 'rails', '~> 5.0.2'
 #password hash function
 gem 'bcrypt', '3.1.11'
+#pagination
+gem 'will_paginate', '3.1.5'
+#pagination styles
+gem 'bootstrap-will_paginate', '1.0.0'
 #boostrap styling
 gem 'bootstrap-sass', '3.3.7'
+#paperclip Active Record media
+gem 'paperclip'
 # Use mysql as the database for Active Record
 gem 'mysql2', '~> 0.3.18'
 # Use Puma as the app server
