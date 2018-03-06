@@ -10,6 +10,7 @@
 }
 
 $state-danger-text: red;
+$logo_yellow: #f2f45f;
 
 /* forms */
 
@@ -117,7 +118,7 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #f2f45f;
+  color: $logo_yellow;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 16px;
