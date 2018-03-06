@@ -9,11 +9,13 @@
   <%= f.label :password%>
   <%= f.password_field :password, class: 'form-control'%>
 
-  <%= f.label :password_confirmation, "Confirmation"%>
+  <%= f.label :password_confirmation, "Confirm Password"%>
   <%= f.password_field :password_confirmation, class: 'form-control'%>
 
   <%= f.label :image, "Profile Picture" %>
   <%= f.file_field :image %>
 
-  <%= f.submit "Submit", class: "btn btn-primary"%>
+  <div class="text-center">
+    <%= f.submit "Sign Up!", class: "btn btn-primary"%>
+  </div>
 <% end %>

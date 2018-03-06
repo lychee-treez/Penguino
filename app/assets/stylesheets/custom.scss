@@ -52,6 +52,14 @@ input {
   }
 }
 
+form {
+  .btn, .btn-primary{
+    width: 150px;
+    height: 40px;
+  }
+}
+
+
 #session_remember_me {
   margin-top: -4px;
   width: auto;
@@ -77,6 +85,10 @@ textarea {
   h1 {
     margin-bottom: 10px;
   }
+}
+
+.btn {
+  color: white;
 }
 
 .gravatar_edit {
