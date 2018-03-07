@@ -9,6 +9,7 @@ attr_accessor :remember_token
                     uniqueness: { case_sensitive: false}
   has_secure_password
   has_attached_file :image, :default_url => "/assets/missing_large.png"
+  has_many :articles
   validates :password, presence: true, length: { minimum: 6 }
   validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
