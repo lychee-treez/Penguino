@@ -2,11 +2,26 @@
 
 <div class="row">
   <aside class="col-md-4">
+    <%= image_tag @user.image.url, :class => "prof_pic" %>
     <section class="user_info">
-      <%= image_tag @user.image.url, :class => "prof_pic" %>
       <h1>
-      <%= @user.name %>
+        <%= @user.name %>
       </h1>
     </section>
+    <section id="create_post">
+      <%= link_to "New Post", new_article_path, class: "button" %>
+    </section>
   </aside>
+  <section id="content">
+
+    <div id="user_post_list">
+      <% @posts.each do |post| %>
+      <article class="user_posts">
+        <header> <%= post.title %> </header>
+        <section> <%= post.body %> </section>
+        <footer> <%= post.created_at.to_s()%> </footer>
+      </article>
+      <% end %>
+    </div>
+  </section>
 </div>
