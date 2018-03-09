@@ -1,3 +1,94 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//variables n mixins
+$button_color: #337ab7;
+$off_white: #f7eee0;
+$logo_yellow: #f2f45f;
+$off_black: #373830;
+
+// show left panel
+
+aside {
+  text-align: center;
+  padding: 30px;
+  background-color: none;
+  box-shadow: 0 0 5px 5px $off_black;
+  border-radius: 20px;
+  margin: 29px 15px 0 0;
+}
+
+.prof_pic {
+  width: 200px;
+  height: 200px;
+  border: 0;
+  margin-bottom: 20px;
+  box-shadow: 0 0 5px 5px white;
+}
+
+.user_info {
+  color: $off_black;
+}
+
+.button:link {
+  border: 1px solid white;
+  background-color: $button_color;
+  color: white;
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
+.button:hover {
+  background-color: white;
+  color: black;
+}
+
+//show main content
+
+#content {
+  background-color: none;
+  padding: 0 30px;
+  border-radius: 10px;
+  margin-left: 15px;
+  display: flex;
+}
+
+#user_post_list {
+  margin: auto;
+}
+
+.user_posts {
+  background-color: white;
+  margin: 30px 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  box-shadow: 0 0 2px 2px $off_black;
+  header {
+    background-color: $off_black;
+    color: $logo_yellow;
+    height: 40px;
+    text-align: center;
+    font-size: 20;
+    font-weight: 800;
+    margin-bottom: 15px;
+  }
+  section {
+    font-weight: 300;
+    padding: 0 15px;
+  }
+  footer {
+    font-size: 10px;
+  }
+}
+
+//index styles
+
+.users li {
+  border-bottom: 1px solid black;
+  display: flex;
+  a {
+    margin: auto;
+    float: right;
+  }
+}
