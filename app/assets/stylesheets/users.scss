@@ -7,15 +7,16 @@ $button_color: #337ab7;
 $off_white: #f7eee0;
 $logo_yellow: #c8ca4e;
 $off_black: #373830;
+$border: #dddfe2;
 
 // show left panel
 
 aside {
   text-align: center;
   padding: 30px;
-  background-color: none;
-  box-shadow: 0 0 5px 5px $off_black;
-  border-radius: 20px;
+  background-color: white;
+  border-radius: 2px;
+  border: 1px solid $border;
   margin: 29px 15px 0 0;
 }
 
@@ -24,7 +25,7 @@ aside {
   height: 200px;
   border: 0;
   margin-bottom: 20px;
-  box-shadow: 0 0 5px 5px white;
+  box-shadow: 0 0 5px 5px black;
 }
 
 .user_info {
@@ -32,16 +33,16 @@ aside {
 }
 
 .button:link {
-  border: 1px solid white;
-  background-color: $button_color;
+  background-color: $border;
   color: white;
-  padding: 20px 40px;
-  border-radius: 10px;
+  padding: 40px 40px;
+  border-radius: 2px;
 }
 
 .button:hover {
   background-color: white;
   color: black;
+  text-decoration: none;
 }
 
 //show main content
@@ -61,11 +62,12 @@ aside {
 .user_posts {
   background-color: white;
   margin: 30px 0;
+  padding: 10px;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
-  box-shadow: 0 0 2px 2px $off_black;
+  border-radius: 2px;
+  border: 1px solid $border;
   header {
-    background-color: $off_black;
     color: $logo_yellow;
     height: 40px;
     text-align: center;
@@ -79,16 +81,25 @@ aside {
   }
   footer {
     font-size: 10px;
+    width: 40%;
   }
 }
 
 //index styles
 
 .users li {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid $border;
   display: flex;
+  list-style: none;
   a {
     margin: auto;
     float: right;
   }
+}
+
+.prof_index {
+  padding: 2px;
+  border: 2px double black;
+  width: 150px;
+  height: 150px;
 }
