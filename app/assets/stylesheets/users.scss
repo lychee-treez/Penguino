@@ -53,10 +53,19 @@ aside {
   border-radius: 10px;
   margin-left: 15px;
   display: flex;
+  flex-direction: column;
+}
+
+#create_post {
+  flex: 1;
+  order: 1;
 }
 
 #user_post_list {
+  flex: 1;
+  order: 2;
   margin: auto;
+  width: 100%;
 }
 
 .user_posts {
