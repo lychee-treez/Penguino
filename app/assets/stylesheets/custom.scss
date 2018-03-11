@@ -16,7 +16,7 @@ $border: #dddfe2;
 
 /* forms */
 
-input, textarea, select, .uneditable-input {
+input[type="text"], textarea, select, .uneditable-input {
   border: 2px solid #bbb;
   width: 100%;
   margin-bottom: 15px;
@@ -53,14 +53,6 @@ input {
     font-weight: normal;
   }
 }
-
-form {
-  .btn, .btn-primary{
-    width: 150px;
-    height: 40px;
-  }
-}
-
 
 #session_remember_me {
   margin-top: -4px;
