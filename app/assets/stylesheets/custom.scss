@@ -14,6 +14,45 @@ $state-danger-text: red;
 $logo_yellow: #c8ca4e;
 $border: #dddfe2;
 
+/* universal styles */
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  background-color: white;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+.button:link {
+  background-color: $logo_yellow;
+  color: white;
+  border-radius: 2px;
+}
+
+.button:hover {
+  background-color: white;
+  color: black;
+  text-decoration: none;
+}
+
+.gravatar_edit {
+  margin: 10px 0px 0px 5px;
+  font-size: 15px;
+}
+
 /* forms */
 
 input[type="text"], textarea, select, .uneditable-input {
@@ -58,46 +97,6 @@ input {
   margin-top: -4px;
   width: auto;
   margin-left: -1px;
-}
-
-/* universal styles */
-
-body {
-  padding-top: 60px;
-}
-
-section {
-  overflow: auto;
-}
-
-textarea {
-  resize: vertical;
-}
-
-.center {
-  text-align: center;
-  background-color: white;
-  h1 {
-    margin-bottom: 10px;
-  }
-}
-
-.btn:link {
-  background-color: $border;
-  color: white;
-  border-radius: 2px;
-}
-
-.btn:hover {
-  background-color: white;
-  color: black;
-  text-decoration: none;
-}
-
-.gravatar_edit {
-
-  margin: 10px 0px 0px 5px;
-  font-size: 15px;
 }
 
 /* text styling */
