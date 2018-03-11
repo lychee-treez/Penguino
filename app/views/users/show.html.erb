@@ -12,8 +12,6 @@
         <%= @user.name %>
       </h1>
     </section>
-    <section id="create_post">
-      <%= link_to "New Post", new_article_path, class: "button" %>
     <section id="connections">
       <div id="followers">
         <header> Followers: </header>
@@ -26,7 +24,7 @@
     </section>
   </aside>
   <section id="content">
-
+    <%= button_to "New Post", new_article_path, class: "button", id: "create_post", method: "get" %>
     <div id="user_post_list">
       <% @posts.each do |post| %>
       <article class="user_posts">
