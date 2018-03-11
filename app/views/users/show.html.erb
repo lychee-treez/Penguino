@@ -22,6 +22,7 @@
         <content> 9 </content>
       </div>
     </section>
+    <%= button_to "Follow", new_article_path, class: "button", id: "follow_button", method: "get" %>
   </aside>
   <section id="content">
     <%= button_to "New Post", new_article_path, class: "button", id: "create_post", method: "get" %>
