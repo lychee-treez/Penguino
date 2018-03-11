@@ -2,7 +2,11 @@
 
 <div class="row">
   <aside class="col-md-4">
+    <% if @user.image.exists? %>
     <%= image_tag @user.image.url, :class => "prof_pic" %>
+    <% else %>
+    <%= image_tag "missing.jpg", :class => "prof_pic"%>
+    <% end %>
     <section class="user_info">
       <h1>
         <%= @user.name %>
