@@ -1,3 +1,3 @@
 # README
 
-This is a penguin only social media platform. It's called Penguino.
+This is a penguin content only social media platform. It's called Penguino.
