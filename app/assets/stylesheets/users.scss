@@ -10,7 +10,6 @@ $off_black: #373830;
 $border: #dddfe2;
 
 // show left panel
-
 aside {
   text-align: center;
   padding: 30px;
@@ -30,6 +29,26 @@ aside {
 
 .user_info {
   color: $off_black;
+}
+
+#connections {
+  display: flex;
+  margin-bottom: 20px;
+  border: 2px solid black;
+  #followers, #following {
+    padding: 10px;
+    margin: auto;
+    flex: 1;
+    border: 1px solid black;
+    header {
+      font-weight: 600;
+      color: black;
+    }
+    content {
+      font-weight: 300;
+      color: $logo_yellow;
+    }
+  }
 }
 
 .button:link {
