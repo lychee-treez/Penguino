@@ -17,7 +17,7 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create article" do
     assert_difference('Article.count') do
-      post articles_url, params: { article: { body: @article.body, title: @article.title } }
+      post '/articles', params: { article: { body: @article.body, title: @article.title } }
     end
 
     assert_redirected_to article_url(Article.last)
@@ -34,7 +34,7 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update article" do
-    patch article_url(@article), params: { article: { body: @article.body, title: @article.title } }
+    patch article_url(@article), params: { article: { body: @article.body, title: @article.title }}
     assert_redirected_to article_url(@article)
   end
 
@@ -42,7 +42,10 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
     assert_difference('Article.count', -1) do
       delete article_url(@article)
     end
-
     assert_redirected_to articles_url
+  end
+
+  teardown do
+    Rails.cache.clear
   end
 end
