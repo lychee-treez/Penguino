@@ -10,6 +10,8 @@ end
 gem 'rails', '~> 5.0.2'
 #password hash function
 gem 'bcrypt', '3.1.11'
+#testing (allow me to assert template)
+gem 'rails-controller-testing'
 #pagination
 gem 'will_paginate', '3.1.5'
 #pagination styles
