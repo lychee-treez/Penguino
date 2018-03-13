@@ -11,9 +11,25 @@ attr_accessor :remember_token
   has_attached_file :image, :default_url => "/assets/missing_large.png"
   has_many :articles
   has_many :relationships
+  has_many :followeds, through: :relationships
   validates :password, presence: true, length: { minimum: 6 }
   validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
+  #check if logged in user follows the person's page they are on
+  def following?(user)
+    followeds.include?(user)
+  end
+
+  #follow the user
+  def follow(user)
+    followeds << user
+  end
+
+  #unfollow the user
+  def unfollow(user)
+    followeds.delete(user)
+  end
+  
   #return digest of given string
   def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
